@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マルチプル骨盤ベルト | 装着ストレスゼロで腰を解放</title>
+    <meta name="description" content="腰が痛い、姿勢が悪いあなたへ。滑車構造で軽い力でガッチリ固定。マルチプル骨盤ベルトで劇的変化を。">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* カスタムアニメーション */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 脈動アニメーション（CTAボタン用） */
+        @keyframes pulse-custom {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+        .btn-pulse {
+            animation: pulse-custom 2s infinite;
+        }
+
+        /* 追従ボタンのスタイル */
+        .sticky-cta {
+            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 20%, #fff 100%);
+        }
+
+        /* ギザギザの区切り線 */
+        .zigzag-divider {
+            position: relative;
+            height: 20px;
+            background: linear-gradient(45deg, transparent 33.333%, #ffffff 33.333%, #ffffff 66.667%, transparent 66.667%), 
+                        linear-gradient(-45deg, transparent 33.333%, #ffffff 33.333%, #ffffff 66.667%, transparent 66.667%);
+            background-size: 20px 40px;
+            background-position: 0 -20px; 
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#D32F2F',     /* 緊急・強調 */
+                            green: '#2E7D32',   /* 安心・機能（画像参照） */
+                            black: '#1a1a1a',
+                            gold: '#FFC107',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased leading-relaxed">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-3 sticky top-0 z-40">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-xl font-black text-brand-black tracking-tighter">
+                <span class="text-brand-red">MULTIPLE</span> PELVIC BELT
+            </h1>
+            <a href="#order-section" class="bg-brand-green text-white text-sm font-bold py-2 px-4 rounded-full hover:opacity-90 transition shadow-lg">
+                <i class="fas fa-shopping-cart mr-1"></i> お得に注文
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-gray-100 to-white overflow-hidden pb-12 pt-8">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <!-- Catchphrase -->
+            <div class="mb-4 inline-block bg-brand-gold text-brand-black font-bold px-4 py-1 rounded-full text-sm transform -rotate-1 shadow-md">
+                \ シリーズ累計販売数 突破！ /
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-black text-brand-black mb-2 leading-tight">
+                その腰の悩みから<br>
+                あなたを<span class="text-brand-red text-4xl md:text-6xl inline-block transform scale-110 mx-1">解放</span>します!!
+            </h2>
+            <p class="text-lg font-bold text-gray-600 mb-6">装着ストレスゼロで劇的変化！</p>
+
+            <!-- Product Image Hero -->
+            <div class="relative w-full max-w-lg mx-auto mb-8">
+                <div class="absolute top-0 right-0 bg-brand-red text-white w-24 h-24 rounded-full flex flex-col items-center justify-center font-bold shadow-xl animate-bounce z-20">
+                    <span class="text-xs">驚きの</span>
+                    <span class="text-2xl">軽さ</span>
+                </div>
+                <!-- User Uploaded Image 1 -->
+                <img src="マルチプル骨盤ベルトLサイズ画像.png" alt="マルチプル骨盤ベルト本体" class="w-full object-contain filter drop-shadow-2xl hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- CTA -->
+            <a href="#order-section" class="btn-pulse inline-block bg-gradient-to-r from-red-600 to-red-500 text-white text-xl md:text-2xl font-black py-4 px-8 rounded-full shadow-lg border-b-4 border-red-800 hover:translate-y-1 transition w-full max-w-md mx-auto">
+                今すぐ腰を楽にする <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+        </div>
+        
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <i class="fas fa-bone text-9xl absolute -left-10 top-20 text-gray-400"></i>
+            <i class="fas fa-running text-9xl absolute -right-10 bottom-20 text-gray-400"></i>
+        </div>
+    </section>
+
+    <!-- Pain Points (共感) -->
+    <section class="py-16 bg-gray-200 clip-path-slant">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-10 fade-in-up">
+                <h3 class="text-2xl md:text-3xl font-bold bg-black text-white inline-block px-6 py-2 transform -skew-x-12">
+                    <span class="transform skew-x-12 inline-block">こんなコトありませんか？</span>
+                </h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Pain 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-8 border-gray-500 flex items-center fade-in-up">
+                    <div class="text-4xl text-gray-400 mr-4">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-1">腰が痛い・だるい</h4>
+                        <p class="text-sm text-gray-600">座っていても立っていても辛い…</p>
+                    </div>
+                </div>
+                <!-- Pain 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-8 border-gray-500 flex items-center fade-in-up delay-100">
+                    <div class="text-4xl text-gray-400 mr-4">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-1">姿勢が悪い</h4>
+                        <p class="text-sm text-gray-600">猫背で老けて見える、太って見える…</p>
+                    </div>
+                </div>
+                <!-- Pain 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-8 border-gray-500 flex items-center fade-in-up delay-200">
+                    <div class="text-4xl text-gray-400 mr-4">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-1">従来のコルセットは苦しい</h4>
+                        <p class="text-sm text-gray-600">締め付けがきつくて続けられない。</p>
+                    </div>
+                </div>
+                <!-- Pain 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-8 border-gray-500 flex items-center fade-in-up delay-300">
+                    <div class="text-4xl text-gray-400 mr-4">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-1">服の下で目立つ</h4>
+                        <p class="text-sm text-gray-600">ゴワゴワして外出時に着けられない。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center fade-in-up">
+                <i class="fas fa-arrow-down text-4xl text-brand-red animate-bounce"></i>
+                <p class="text-xl font-bold mt-4">そのお悩み、<span class="text-brand-red text-3xl">マルチプル骨盤ベルト</span>にお任せください！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / USP (解決策・特徴) -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- Provided Image 2 (Features Infographic) -->
+            <div class="mb-12 shadow-2xl rounded-lg overflow-hidden border-4 border-brand-green fade-in-up">
+                <img src="image.png" alt="マルチプル骨盤ベルトの特徴解説" class="w-full h-auto">
+            </div>
+
+            <h3 class="text-3xl md:text-4xl font-black text-center text-brand-green mb-12">
+                <span class="border-b-4 border-brand-green px-4">ココがスゴい！3つのこだわり</span>
+            </h3>
+
+            <!-- Feature 1 -->
+            <div class="flex flex-col md:flex-row items-center mb-16 fade-in-up">
+                <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+                    <div class="bg-brand-black text-white text-xs font-bold inline-block px-3 py-1 mb-2 rounded">こだわりポイント①</div>
+                    <h4 class="text-2xl font-bold text-brand-green mb-4">長時間つけても楽々！<br>新感覚のつけ心地</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        「スパンテック」という特殊な生地を採用。従来のコルセットのような「硬くて痛い」を解消。<br>
+                        <span class="font-bold bg-yellow-100">8倍も伸びるスゴい生地</span>が、体の動きに合わせてフィットし、ズレ上がりも防ぎます。
+                    </p>
+                </div>
+                <div class="md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+                     <!-- Placeholder for material zoom -->
+                    <div class="bg-gray-200 h-64 flex items-center justify-center relative">
+                        <i class="fas fa-compress-arrows-alt text-6xl text-gray-400"></i>
+                        <span class="absolute bottom-4 text-gray-500 font-bold">驚異の伸縮性</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="flex flex-col md:flex-row-reverse items-center mb-16 fade-in-up">
+                <div class="md:w-1/2 mb-6 md:mb-0 md:pl-8">
+                    <div class="bg-brand-black text-white text-xs font-bold inline-block px-3 py-1 mb-2 rounded">こだわりポイント②</div>
+                    <h4 class="text-2xl font-bold text-brand-green mb-4">力いらずで装着カンタン！<br>滑車構造を採用</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        10個の動滑車が力を増幅。紐を軽く引くだけで、<span class="font-bold bg-yellow-100">驚くほどガッチリと骨盤を固定</span>します。<br>
+                        握力が弱い女性やご高齢の方でも、片手でキュッと締められます。
+                    </p>
+                </div>
+                <div class="md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+                    <!-- Placeholder for pulley mechanism -->
+                    <div class="bg-gray-200 h-64 flex items-center justify-center relative">
+                        <i class="fas fa-cogs text-6xl text-gray-400"></i>
+                        <span class="absolute bottom-4 text-gray-500 font-bold">滑車の力で10倍の締め付け</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="flex flex-col md:flex-row items-center mb-8 fade-in-up">
+                <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+                    <div class="bg-brand-black text-white text-xs font-bold inline-block px-3 py-1 mb-2 rounded">こだわりポイント③</div>
+                    <h4 class="text-2xl font-bold text-brand-green mb-4">薄いので服の下でも見えにくい<br>そのまま外出もOK</h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        ゴワつかないスリム設計。シャツの下に着けても目立ちません。<br>
+                        着けた瞬間、姿勢がシャンとして<span class="font-bold bg-yellow-100">「着痩せ効果」</span>も期待できます。
+                    </p>
+                </div>
+                <div class="md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+                    <!-- Placeholder for invisible usage -->
+                    <div class="bg-gray-200 h-64 flex items-center justify-center relative">
+                        <i class="fas fa-user-secret text-6xl text-gray-400"></i>
+                        <span class="absolute bottom-4 text-gray-500 font-bold">目立たないシルエット</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof (口コミ) -->
+    <section class="py-16 bg-brand-green text-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h3 class="text-3xl font-bold text-center mb-10">喜びの声が届いています！</h3>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- User 1 -->
+                <div class="bg-white text-gray-800 p-6 rounded-lg shadow-xl relative fade-in-up">
+                    <div class="absolute -top-4 -left-4 bg-brand-gold text-brand-black font-bold w-16 h-16 flex items-center justify-center rounded-full border-4 border-white z-10">
+                        53歳
+                    </div>
+                    <div class="pl-8">
+                        <p class="font-bold text-lg mb-2">水野慎さん</p>
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="italic">「着けた瞬間、姿勢が良くなりました。素材が柔らかいので、運動も楽になりました！」</p>
+                    </div>
+                </div>
+
+                <!-- User 2 -->
+                <div class="bg-white text-gray-800 p-6 rounded-lg shadow-xl relative fade-in-up delay-100">
+                    <div class="absolute -top-4 -left-4 bg-brand-gold text-brand-black font-bold w-16 h-16 flex items-center justify-center rounded-full border-4 border-white z-10">
+                        64歳
+                    </div>
+                    <div class="pl-8">
+                        <p class="font-bold text-lg mb-2">徳永佳子さん</p>
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="italic">「動き回っても腰への負担が軽く、快適に過ごせます。背が伸びた気がして歩きやすい！」</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer / Pricing (オファー・価格) -->
+    <section id="order-section" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-black text-center text-brand-red mb-4">
+                今だけの特別価格
+            </h2>
+            <p class="text-center text-gray-600 mb-12 font-bold">洗い替え用やご家族の分も合わせてお得に！</p>
+
+            <div class="grid md:grid-cols-3 gap-8 items-end">
+                <!-- Plan 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-gray-200 py-4 text-center font-bold text-gray-600">お試し</div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-bold mb-4">単品購入</h4>
+                        <img src="マルチプル骨盤ベルトLサイズ画像.png" alt="1個" class="w-24 mx-auto mb-4">
+                        <div class="text-3xl font-black text-gray-800 mb-2">9,900<span class="text-sm font-normal">円</span></div>
+                        <p class="text-xs text-gray-500 mb-6">（税込・送料無料）</p>
+                        <button class="w-full bg-gray-600 text-white font-bold py-3 rounded hover:bg-gray-700 transition" onclick="alert('単品コースを選択しました')">カートに入れる</button>
+                    </div>
+                </div>
+
+                <!-- Plan 3 (Best Value) -->
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform scale-105 border-4 border-brand-gold relative z-10">
+                    <div class="absolute top-0 right-0 bg-brand-red text-white text-xs font-bold px-2 py-1">一番人気</div>
+                    <div class="bg-brand-gold py-4 text-center font-black text-brand-black text-xl">
+                        <i class="fas fa-crown"></i> 3個セット
+                    </div>
+                    <div class="p-6 text-center bg-yellow-50">
+                        <p class="text-brand-red font-bold text-sm mb-2 bg-white inline-block px-2 rounded-full border border-brand-red">9,900円もお得！</p>
+                        <h4 class="text-xl font-bold mb-4">ご家族・友人とシェア</h4>
+                        <div class="flex justify-center mb-4 space-x-[-10px]">
+                            <img src="マルチプル骨盤ベルトLサイズ画像.png" class="w-20">
+                            <img src="マルチプル骨盤ベルトLサイズ画像.png" class="w-20">
+                            <img src="マルチプル骨盤ベルトLサイズ画像.png" class="w-20">
+                        </div>
+                        <p class="text-gray-400 line-through text-sm">通常 29,700円</p>
+                        <div class="text-4xl font-black text-brand-red mb-2">19,800<span class="text-sm font-normal text-gray-800">円</span></div>
+                        <p class="text-sm font-bold text-brand-green mb-6">1個あたり 6,600円！</p>
+                        <button class="w-full btn-pulse bg-gradient-to-r from-red-600 to-red-500 text-white font-black py-4 rounded text-xl shadow-lg hover:opacity-90 transition" onclick="alert('3個セットを選択しました')">今すぐ注文する</button>
+                    </div>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                    <div class="bg-brand-green py-4 text-center font-bold text-white">お得なセット</div>
+                    <div class="p-6 text-center">
+                        <p class="text-brand-red font-bold text-xs mb-2">4,900円お得</p>
+                        <h4 class="text-xl font-bold mb-4">2個セット</h4>
+                        <div class="flex justify-center mb-4 space-x-[-10px]">
+                            <img src="マルチプル骨盤ベルトLサイズ画像.png" class="w-20">
+                            <img src="マルチプル骨盤ベルトLサイズ画像.png" class="w-20">
+                        </div>
+                        <p class="text-gray-400 line-through text-sm">通常 19,800円</p>
+                        <div class="text-3xl font-black text-gray-800 mb-2">14,900<span class="text-sm font-normal">円</span></div>
+                        <p class="text-sm font-bold text-gray-500 mb-6">1個あたり 7,450円</p>
+                        <button class="w-full bg-brand-green text-white font-bold py-3 rounded hover:opacity-90 transition" onclick="alert('2個セットを選択しました')">カートに入れる</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Payment Methods -->
+            <div class="mt-12 text-center">
+                <p class="text-sm text-gray-500 mb-4">お支払い方法</p>
+                <div class="flex justify-center space-x-4 text-3xl text-gray-400">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-jcb"></i>
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <p class="text-xs text-gray-400 mt-2">クレジットカード / 代金引換 / 銀行振込</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h3 class="text-2xl font-bold text-center mb-8">よくあるご質問</h3>
+            <div class="space-y-4">
+                <details class="bg-gray-100 rounded-lg p-4 cursor-pointer group">
+                    <summary class="font-bold flex justify-between items-center">
+                        Q. 1日どれくらい着ければいいですか？
+                        <i class="fas fa-chevron-down transform group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="mt-2 text-gray-600 text-sm">A. 最初は1日1〜2時間から始め、慣れてきたら時間を延ばしてください。就寝時のご使用はお控えください。</p>
+                </details>
+                <details class="bg-gray-100 rounded-lg p-4 cursor-pointer group">
+                    <summary class="font-bold flex justify-between items-center">
+                        Q. 服の上からでも着けられますか？
+                        <i class="fas fa-chevron-down transform group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="mt-2 text-gray-600 text-sm">A. はい、可能です。薄手なので肌着の上からでも、シャツの上からでも目立ちにくく設計されています。</p>
+                </details>
+                <details class="bg-gray-100 rounded-lg p-4 cursor-pointer group">
+                    <summary class="font-bold flex justify-between items-center">
+                        Q. 洗濯はできますか？
+                        <i class="fas fa-chevron-down transform group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="mt-2 text-gray-600 text-sm">A. 手洗いを推奨しております。中性洗剤を使用し、陰干ししてください。</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8 text-center text-sm">
+        <div class="container mx-auto px-4">
+            <div class="mb-4">
+                <a href="#" class="hover:text-white mx-2">特定商取引法に基づく表記</a> |
+                <a href="#" class="hover:text-white mx-2">プライバシーポリシー</a> |
+                <a href="#" class="hover:text-white mx-2">会社概要</a>
+            </div>
+            <p>&copy; 2024 Multiple Pelvic Belt Official. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div id="sticky-cta" class="sticky-cta fixed bottom-0 left-0 w-full p-4 border-t border-gray-200 z-50 md:hidden transform translate-y-full transition duration-300 shadow-[0_-5px_10px_rgba(0,0,0,0.1)]">
+        <a href="#order-section" class="btn-pulse block w-full bg-brand-red text-white text-center font-black py-3 rounded-full text-lg shadow-lg">
+            残りわずか！お得に購入する <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Run once
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-in-up');
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Sticky CTA Logic for Mobile
+            const stickyCta = document.getElementById('sticky-cta');
+            const orderSection = document.getElementById('order-section');
+            
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                const orderTop = orderSection.offsetTop;
+                
+                // Show sticky CTA after scrolling past hero (approx 500px) but hide when reaching order section
+                if (scrollY > 500 && scrollY < (orderTop - window.innerHeight + 100)) {
+                    stickyCta.classList.remove('translate-y-full');
+                } else {
+                    stickyCta.classList.add('translate-y-full');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
